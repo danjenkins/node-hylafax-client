@@ -1,0 +1,15 @@
+{
+  "author": "Dan Jenkins <dan.jenkins@holidayextras.com> (www.dan-jenkins.co.uk)",
+  "name": "hylafax-client",
+  "description": "A client to interact with Hylafax using NodeJS",
+  "version": "0.0.1-alpha",
+  "main": "index.js",
+  "dependencies": {
+    "ftp": "0.1.2"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}
