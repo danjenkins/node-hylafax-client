@@ -5,7 +5,8 @@
   "version": "0.0.1-alpha",
   "main": "index.js",
   "dependencies": {
-    "ftp": "git://github.com/danjenkins/node-ftp.git"
+    "ftp": "git://github.com/danjenkins/node-ftp.git",
+    "async": "0.1.22"
   },
   "devDependencies": {},
   "optionalDependencies": {},
