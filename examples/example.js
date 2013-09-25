@@ -2,23 +2,21 @@ var Hylafax = require('../index');
 var fs = require('fs');
 
 
-//var hylafax = new Hylafax({host: 'barbara.holidayextras.local', port: 4559, username: 'node_faxer', password: 'n0D3HylAfaxUseR'/*, debug: true*/});
-var hylafax = new Hylafax({host: '172.16.172.136', port: 4559, username: 'dan', password: 'password', debug: true});
+var hylafax = new Hylafax({host: '127.0.0.1', port: 4559, username: 'username', password: 'password', debug: true});
 
 hylafax.on('ready', function(){
   console.log('READY');
 
-  
-  //hylafax.loginAdmin('aDmiNn03ehyLafAx', function(err, res){
+
   hylafax.loginAdmin('adminpass', function(err, res){
-  
+
     console.log('logged in as admin', err, res);
-    
+
     // hylafax.getStatus(function(){
     //    console.log('got status');
     // })
-    
-    hylafax.sendFax(fs.createReadStream('/git/node-hylafax-client/examples/foo.ps'), '01303768643', function(err, res){
+
+    hylafax.sendFax(fs.createReadStream('foo.ps'), '0123456789', function(err, res){
       console.log('NO WOO!', err, res);
     })
     //hylafax.help('STOT', function(err, res){
@@ -48,7 +46,7 @@ process.once('SIGINT', function(){
 //EXAMPLE OF SEND THROUGH SENDFAX
 
 /*
-sendfax -T1 -n -vv -i test -d 07976559930 /tmp/faxlog 
+sendfax -T1 -n -vv -i test -d 07976559930 /tmp/faxlog
 
 Trying localhost (127.0.0.1) at port 4559...
 
